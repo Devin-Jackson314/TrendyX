@@ -1,0 +1,2 @@
+# TrendyX
+twitter clone
