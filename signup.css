@@ -7,7 +7,13 @@ h1{
     font-family: 'Inter';
         font-style: italic;
         font-weight: 600;
-        font-size: 30px;
+        font-size: 1.6rem;
         line-height: 155px;
         text-align: center;
+}
+
+@media(min-width:40rem){
+    h1{
+      font-size: 3rem;  
+    }
 }
