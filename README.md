@@ -1,2 +1,3 @@
 # TrendyX
-twitter clone
+
+twitter clone project
