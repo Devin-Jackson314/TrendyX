@@ -17,3 +17,8 @@ h1{
       font-size: 3rem;  
     }
 }
+
+.button {
+    color: #7B8A40;
+    background-color: #45502d;
+}

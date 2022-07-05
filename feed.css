@@ -1,8 +1,16 @@
  body {
+       
         color: #45502d;
      background-color: #7B8A40;
  }
 
- *{
+ .text-primary{
     color: #45502d;
  }
+
+ p{
+    width: 500px;
+    height: 500px;
+ }
+
+ 
