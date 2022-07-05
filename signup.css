@@ -1,3 +1,13 @@
 body {
+    color: #45502d;
     background-color: #7B8A40;
+}
+h1{
+    color:#45502d;
+    font-family: 'Inter';
+        font-style: italic;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 155px;
+        text-align: center;
 }
