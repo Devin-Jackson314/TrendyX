@@ -8,3 +8,9 @@ body {
     font-size: x-small;
 
 }
+
+@media(min-width:40rem) {
+   body {
+        font-size: x-large;
+    }
+}

@@ -22,3 +22,8 @@ h1{
     color: #7B8A40;
     background-color: #45502d;
 }
+
+.navbar-brand {
+    font-size: x-small;
+
+}
