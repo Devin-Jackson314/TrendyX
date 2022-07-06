@@ -1,4 +1,6 @@
  body {
+
+      
        
         color: #45502d;
      background-color: #7B8A40;
@@ -8,11 +10,19 @@
     color: #45502d;
  }
  .navbar-brand {
-    font-size: x-small;
+    font-size: small;
 
  }
+@media(min-width:40rem) {
+   body {
+      font-size: x-large;
+      text-align: left;
+   }
 
+  
+}
  p{
+   
     width: 500px;
     height: 500px;
  }
