@@ -2,10 +2,22 @@
 
       
     color: #45502d;
-     background-color: black;
+     background-color:#7B8A40;
+     margin:2em;
+   border: 1px solid black !important;
  }
 
- .text-primary{
+hr {
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+   border: 1px;
+   border-top: 3px solid black;
+}
+.containermain-sectionborder{
+ margin: 3px;
+ color: #45502d;
+}
+ .text-primary#text-secondary{
     color:#45502d ;
  }
  .navbar-brand {
