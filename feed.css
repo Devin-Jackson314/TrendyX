@@ -1,13 +1,12 @@
  body {
 
       
-       
-        color: #45502d;
-     background-color: #7B8A40;
+    color: #45502d;
+     background-color: black;
  }
 
  .text-primary{
-    color: #45502d;
+    color:#45502d ;
  }
  .navbar-brand {
     font-size: small;
