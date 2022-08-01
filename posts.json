@@ -1,0 +1,89 @@
+{
+    "ProgressivePastor": {
+        "firstName": "Christian",
+        "lastName": "Pastor",
+        "age": "32",
+        "userName":"ProgressivePastor",
+        "posts": {
+            "New take on life":{
+            "id":1,
+            "time":"2:32",
+            "post":"Life Changes",
+            "likes":"7",
+            "dislikes":"10"
+        },
+        "Sleaze Ball":{
+            "id":2,
+            "time":"2:42",
+            "post":"Ball of Fire",
+            "likes":"50",
+            "dislikes":"2"
+        },
+        
+        "What does the Future Bring":{
+            "id":3,
+            "time":"4:30",
+            "post":"A look inside",
+            "likes":"30",
+            "dislikes":"5"
+        }}
+    },
+    "Transitional Female": {
+        "firstName": "Ann",
+        "lastName": "Bell",
+        "age": "42",
+        "userName":"TF",
+        "posts": {
+            "You can do it":{
+            "id":1,
+            "time":"3:36",
+            "post":"Maintain Your Goals",
+            "likes":"72",
+            "dislikes":"10"
+        },
+        "Entry Level Work":{
+            "id":2,
+            "time":"3:42",
+            "post":"Pay yourself",
+            "likes":"54",
+            "dislikes":"5"
+        },
+        
+        "Advanced Level Work":{
+            "id":3,
+            "time":"4:43",
+            "post":"After the Hard work",
+            "likes":"45",
+            "dislikes":"2"
+        }}
+    },
+    "Alpha Male": {
+        "firstName": "Donny",
+        "lastName": "Gains",
+        "age": "",
+        "userName":"Alphamale",
+        "posts": {
+            "Maximize Your Gains":{
+            "id":1,
+            "time":"2:35",
+            "post":"Claim your Gains",
+            "likes":"132",
+            "dislikes":"7"
+        },
+        "30 min Workout":{
+            "id":2,
+            "time":"2:55",
+            "post":"Just do it",
+            "likes":"175",
+            "dislikes":"5"
+        },
+        
+        "Don't Forget to Strecth":{
+            "id":3,
+            "time":"3:32",
+            "post":"Strecthing 101",
+            "likes":"82",
+            "dislikes":"5"
+        }}
+    }
+}
