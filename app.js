@@ -12,9 +12,18 @@ let jsonEXT = ".json";
 $gtbtn.click(function () {
     $.ajax({
         type: "GET",
-        url: `$(fireBaseUrl)$(jsonEXT)`,
+        url: `${fireBaseUrl}${jsonEXT}`,
         success: function (data) {
             console.log(data, "you have logged your data");
+            let userInfo = { ...data }
+            for (const userName in userInfo) { 
+            if (Object.hasOwnProperty.call(userInfo, userName)) {
+                const element = userInfo[userName];
+                console.log(userInfo, userName)
+                    
+            }
+            }
+           
         },
         error: function (error) {
             console.log(error);
