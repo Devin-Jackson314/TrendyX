@@ -14,13 +14,16 @@ $gtbtn.click(function () {
         type: "GET",
         url: `${fireBaseUrl}${jsonEXT}`,
         success: function (data) {
-            console.log(data, "you have logged your data");
+            //console.log(data, "you have logged your data");
             let userInfo = { ...data }
             for (const userName in userInfo) { 
             if (Object.hasOwnProperty.call(userInfo, userName)) {
-                const element = userInfo[userName];
-                console.log(userInfo, userName)
-                    
+                const userNameKey = userInfo[userName];
+                //console.log(userNameKey)
+                //console.log(userNameKey.firstName) 
+                let userGroup = "<div>" + "<p>" + userNameKey.firstName +
+                    " " + userNameKey.lastName + "</p>" + "</div>"
+                $('#userAppend').append(userGroup)
             }
             }
            

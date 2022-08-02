@@ -1,16 +1,42 @@
 body {
+
     color: #45502d;
     background-color: #7B8A40;
 }
-       
 
-.navbar-brand{
-    font-size: x-small;
+h1 {
+    font-size: small;
+    font-family: 'Inter';
+    font-style: italic;
+    color: #45502d;
+}
+
+@media(min-width:40rem) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.button {
+
+    color: #7B8A40;
+    background-color: #45502d;
+}
+
+.img {
+    align-content: center;
+    height: 20vh;
+    width: 200px;
 
 }
 
 @media(min-width:40rem) {
-   body {
-        font-size: x-large;
+    .img {
+        height: 300px;
+        width: 400px
     }
+}
+
+.navbar-brand {
+    font-size: x-small;
 }
