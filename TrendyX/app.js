@@ -10,14 +10,14 @@ let jsonEXT = ".json";
 
 //get method
 $gtbtn.click(function () {
-    $.ajax({
+   $.ajax({
         type: "GET",
-        url: `$(fireBaseUrl)$(jsonEXT)`,
-        success: function (data) {
-            console.log(data, "you have logged your data");
+        url: `${fireBaseUrl}${jsonEXT}`,
+        success: function(data){
+           console.log(data, "logging the entire data object")
         },
-        error: function (error) {
-            console.log(error);
+        error: function(error){
+            console.log(error)
         }
     })
 })
