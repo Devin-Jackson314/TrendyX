@@ -17,30 +17,40 @@ $gtbtn.click(function () {
             //console.log(data, "you have logged your data");
             let userInfo = { ...data }
             for (const userName in userInfo) { 
-            if (Object.hasOwnProperty.call(userInfo, userName)) {
-                const userNameKey = userInfo[userName];
-                console.log(userNameKey, "This is the user name key")
-                //console.log(userNameKey.firstName)
-                //let userGroup = "<div>" + "<p>" + userNameKey.firstName +
+                if (Object.hasOwnProperty.call(userInfo, userName)) {
+                    const userNameKey = userInfo[userName];
+                    //console.log(userNameKey, "This is the user name key")
+                    //console.log(userNameKey.firstName)
+                    //let userGroup = "<div>" + "<p>" + userNameKey.firstName +
                     //" " + userNameKey.lastName + "</p>" + "</div>"
-                //$('#userAppend').append(userGroup)
-                //let userNameKey1 = { ...data }
+                    //$('#userAppend').append(userGroup)
+                    //let userNameKey1 = { ...data }
 
-   
-                for (const post in userInfo) {
-                    if (Object.hasOwnProperty.call(userInfo, post)) {
-                        let feed = userInfo[post];
-                        console.log(feed.time, "This is the time of the post")
-                        console.log(feed, "this is the feed variable")
+                    let userInfo2 = { ...data }
+                    for (const id in userInfo2) {
+                        if (Object.hasOwnProperty.call(userInfo2, id)) {
+                            const feed = userInfo2[id].posts;
+                            console.log(feed, "this is the feed")
 
-                        //let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
-                           // "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
-                           // "</p>" + "<p>" + feed + "</p>" +
+                            //let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
+                            // "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
+                            // "</p>" + "<p>" + feed + "</p>" +
                             //"<p>" + feed.time + "</p>" + "</div>"
-                        //$('#userAppend').append(userGroup2)
+                            //$('#userAppend').append(userGroup2)
+
+                         for (const post in feed) {
+                            if (Object.hasOwnProperty.call(feed,post)) {
+                                const postinfo = feed[post];
+                                console.log(postinfo, "This is your post info");
+                                console.log(postinfo.id, "This is your post is");
+                                
+                            }
+                         }
                   
+                        }
                     }
-                }
+
+                    
             }
             }
            
