@@ -42,7 +42,9 @@ $gtbtn.click(function () {
                             if (Object.hasOwnProperty.call(feed,post)) {
                                 const postinfo = feed[post];
                                 console.log(postinfo, "This is your post info");
-                                console.log(postinfo.id, "This is your post is");
+                                console.log(postinfo.id, "This is your post id");
+                                console.log(postinfo.time, "This is the time");
+                               
                                 
                             }
                          }
