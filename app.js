@@ -19,7 +19,7 @@ $gtbtn.click(function () {
             for (const userName in userInfo) { 
             if (Object.hasOwnProperty.call(userInfo, userName)) {
                 const userNameKey = userInfo[userName];
-                //console.log(userNameKey)
+                console.log(userNameKey, "This is the user name key")
                 //console.log(userNameKey.firstName)
                 //let userGroup = "<div>" + "<p>" + userNameKey.firstName +
                     //" " + userNameKey.lastName + "</p>" + "</div>"
@@ -27,16 +27,17 @@ $gtbtn.click(function () {
                 //let userNameKey1 = { ...data }
 
    
-                for (const posts in userNameKey) {
-                    if (Object.hasOwnProperty.call(userNameKey, posts)) {
-                        let feed = userNameKey[posts];
-                        console.log(feed)
+                for (const post in userInfo) {
+                    if (Object.hasOwnProperty.call(userInfo, post)) {
+                        let feed = userInfo[post];
+                        console.log(feed.time, "This is the time of the post")
+                        console.log(feed, "this is the feed variable")
 
-                        let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
-                            "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
-                            "</p>" + "<p>" +feed.post + "</p>" +
-                            "<p>" + feed.time + "</p>" + "</div>"
-                        $('#userAppend').append(userGroup2)
+                        //let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
+                           // "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
+                           // "</p>" + "<p>" + feed + "</p>" +
+                            //"<p>" + feed.time + "</p>" + "</div>"
+                        //$('#userAppend').append(userGroup2)
                   
                     }
                 }
