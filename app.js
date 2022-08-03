@@ -26,16 +26,17 @@ $gtbtn.click(function () {
                 //$('#userAppend').append(userGroup)
                 //let userNameKey1 = { ...data }
 
-                //is feed an array now because of previous loop 
-                for (const post in userNameKey) {
-                    if (Object.hasOwnProperty.call(userNameKey, post)) {
-                        const feed = userNameKey[post];
+   
+                for (const posts in userNameKey) {
+                    if (Object.hasOwnProperty.call(userNameKey, posts)) {
+                        let feed = userNameKey[posts];
                         console.log(feed)
-                        let userGroup2 = "<div class = 'text-box'> style= 'border: 1px solid black; margin-top: 5 px'>" +
+
+                        let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
                             "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
-                            "</p>" + "<p>" + feed.post + "</p>" +
+                            "</p>" + "<p>" +feed.post + "</p>" +
                             "<p>" + feed.time + "</p>" + "</div>"
-                        $('#userList').append(userGroup2)
+                        $('#userAppend').append(userGroup2)
                   
                     }
                 }
