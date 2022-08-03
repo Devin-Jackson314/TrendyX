@@ -31,7 +31,7 @@ $gtbtn.click(function () {
                     if (Object.hasOwnProperty.call(userNameKey, post)) {
                         const feed = userNameKey[post];
                         console.log(feed)
-                        let userGroup2 = "div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
+                        let userGroup2 = "<div class = 'text-box'> style= 'border: 1px solid black; margin-top: 5 px'>" +
                             "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
                             "</p>" + "<p>" + feed.post + "</p>" +
                             "<p>" + feed.time + "</p>" + "</div>"
