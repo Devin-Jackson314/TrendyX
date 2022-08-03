@@ -20,10 +20,17 @@ $gtbtn.click(function () {
             if (Object.hasOwnProperty.call(userInfo, userName)) {
                 const userNameKey = userInfo[userName];
                 //console.log(userNameKey)
-                //console.log(userNameKey.firstName) 
-                let userGroup = "<div>" + "<p>" + userNameKey.firstName +
-                    " " + userNameKey.lastName + "</p>" + "</div>"
-                $('#userAppend').append(userGroup)
+                //console.log(userNameKey.firstName)
+                //let userGroup = "<div>" + "<p>" + userNameKey.firstName +
+                    //" " + userNameKey.lastName + "</p>" + "</div>"
+                //$('#userAppend').append(userGroup)
+                let userNameKey1 = { ...data }
+                for (const posts in userNameKey1) {
+                    if (Object.hasOwnProperty.call(userNameKey1, posts)) {
+                        const feed = userNameKey1[posts];
+                        console.log(feed)
+                    }
+                }
             }
             }
            
