@@ -28,7 +28,13 @@ $gtbtn.click(function () {
                 for (const posts in userNameKey) {
                     if (Object.hasOwnProperty.call(userNameKey, posts)) {
                         const feed = userNameKey[posts];
-                        console.log(feed)
+                        //console.log(feed)
+                        let userGroup2 = "div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
+                            "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
+                            "</p>" + "<p>" + feed.post + "</p>" +
+                            "<p>" + feed.time + "</p>" + "</div>"
+                        $('#userList').append(userBox2)
+                  
                     }
                 }
             }
