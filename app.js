@@ -32,11 +32,7 @@ $gtbtn.click(function () {
                             const feed = userInfo2[id].posts;
                             console.log(feed, "this is the feed")
 
-                            //let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
-                            // "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
-                            // "</p>" + "<p>" + feed + "</p>" +
-                            //"<p>" + feed.time + "</p>" + "</div>"
-                            //$('#userAppend').append(userGroup2)
+                           
 
                          for (const post in feed) {
                             if (Object.hasOwnProperty.call(feed,post)) {
@@ -44,6 +40,13 @@ $gtbtn.click(function () {
                                 console.log(postinfo, "This is your post info");
                                 console.log(postinfo.id, "This is your post id");
                                 console.log(postinfo.time, "This is the time");
+                                console.log(postinfo.post, "This is your post title")
+                                
+                            let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
+                             "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
+                             "</p>" + "<p>" + postinfo.post + "</p>" +
+                            "<p>" + postinfo.time + "</p>" + "</div>"
+                            $('#userAppend').append(userGroup2)
                                
                                 
                             }

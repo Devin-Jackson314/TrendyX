@@ -26,10 +26,16 @@ hr {
  .text{
     color:#45502d ;
  }
- .navbar-brand {
+ /*.navbar-brand {
     font-size: small;
 
  }
+
+ p{
+   width: 300px;
+   height: 300px;
+ }
+
 @media(min-width:40rem) {
    body {
       font-size: x-large;
