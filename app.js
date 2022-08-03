@@ -24,10 +24,10 @@ $gtbtn.click(function () {
                 //let userGroup = "<div>" + "<p>" + userNameKey.firstName +
                     //" " + userNameKey.lastName + "</p>" + "</div>"
                 //$('#userAppend').append(userGroup)
-                let userNameKey1 = { ...data }
-                for (const posts in userNameKey1) {
-                    if (Object.hasOwnProperty.call(userNameKey1, posts)) {
-                        const feed = userNameKey1[posts];
+                //let userNameKey1 = { ...data }
+                for (const posts in userNameKey) {
+                    if (Object.hasOwnProperty.call(userNameKey, posts)) {
+                        const feed = userNameKey[posts];
                         console.log(feed)
                     }
                 }
