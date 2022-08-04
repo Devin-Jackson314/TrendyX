@@ -73,12 +73,12 @@ $loginBtn.click(function () {
 
         success: function (data) {
             let currentUser = $('#loginInput').val()
-            let userFound = false;
+            let userKnown = false;
             let userInfo = { ...data }
             for (const userName in userInfo) {
                 if (userInfo[userName].userName == currentUser) {
                     sessionStorage.setItem('user', currentUser)
-                    userFound = true;
+                    userKnown = true;
                     window.location = "///Users/dj/Documents/TrendyX/feedsec.html"
                     //     //const userNameKey = userInfo[userName];
                     //     console.log(userNameKey, "This is the user name key")
@@ -86,7 +86,7 @@ $loginBtn.click(function () {
                     
                 }
             }
-            if (userFound === false) {
+            if (userKnown === false) {
 
                 alert("User is not a member of Trendy x")
             }
