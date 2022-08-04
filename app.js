@@ -80,6 +80,7 @@ $loginBtn.click(function () {
                     sessionStorage.setItem('user', currentUser)
                     userKnown = true;
                     window.location = "///Users/dj/Documents/TrendyX/feedsec.html"
+                    ///Users/dj/Documents/TrendyX/feedsec.html
                     //     //const userNameKey = userInfo[userName];
                     //     console.log(userNameKey, "This is the user name key")
                     //     console.log(userNameKey.firstName)
@@ -148,7 +149,7 @@ $pbutton.click(function () {
 $deletebtn.click(function () {
     $.ajax({
         type: "DELETE",
-        url: `${fireBaseUrl}-7dhek2nd9k${jsonEXT}`,
+        url: `https://twitterclone-af72e-default-rtdb.firebaseio.com/-Yjeo102839/posts/-kekemdnfng${jsonEXT}`,
         success: (data) => {
             console.log("Deleted Successfully" + data)
         },
