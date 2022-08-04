@@ -181,4 +181,19 @@ $deletebtn.click(function () {
 })
 
 //patch data edit button 
+$editbtn.click(function () {
+    $.ajax({
+        type: "PATCH",
+        url: `https://twitterclone-af72e-default-rtdb.firebaseio.com/-7dhek2nd9k/posts/-10dkfn4n5t/post${ jsonEXT }`,
+        data: JSON.stringify({
+            post:"Testing To See If This Works"
+        }),
+        success: (data) => {
+            console.log(data)
+         },
+        error: (error) => {
+            console.log(error)
+        }
+    })
+})
 
