@@ -3,7 +3,7 @@ const $pbutton = $('#pbtn');
 const $deletebtn = $('#deletebtn');
 const $editbtn = $('#editbtn');
 const $gtbtn = $('#gtbtn');
-const $signinbtn = $('#signinbtn');
+const $loginBtn= $('#loginBtn');
 
 let fireBaseUrl = "https://twitterclone-af72e-default-rtdb.firebaseio.com/";
 let jsonEXT = ".json";
@@ -64,18 +64,38 @@ let jsonEXT = ".json";
 
                                     
 //login functionality
-$signinbtn.click(function () {
-    let currentUser = $('#username').val()
+$loginBtn.click(function () {
+    
+    //console.log(currentUser);
     $.ajax({
         type: "GET",
-        url: `${fireBaseUrl}${currentUser}${jsonEXT}`,
+        url: `${fireBaseUrl}${jsonEXT}`,
 
         success: function (data) {
-            if (data === null) {
-                alert("User not reconigzed")
-            } else {
-                console.log("User exists")
+            let currentUser = $('#loginInput').val()
+            let userFound = false;
+            let userInfo = { ...data }
+            for (const userName in userInfo) {
+                if (userInfo[userName].userName == currentUser) {
+                    sessionStorage.setItem('user', currentUser)
+                    userFound = true;
+                    window.location = "///Users/dj/Documents/TrendyX/feedsec.html"
+                    //     //const userNameKey = userInfo[userName];
+                    //     console.log(userNameKey, "This is the user name key")
+                    //     console.log(userNameKey.firstName)
+                    
+                }
             }
+            if (userFound === false) {
+
+                alert("User is not a member of Trendy x")
+            }
+            //if (data === null) {
+                //alert("User not reconigzed");
+            //} else {
+                //console.log("User exists");
+                //sessionStorage.setItem("")
+           // }
         },
         error: function (error) {
             console.log(error)
