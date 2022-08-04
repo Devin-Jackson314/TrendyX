@@ -132,32 +132,32 @@ $pbutton.click(function () {
         type: "POST",
         url: `${fireBaseUrl}${jsonEXT}`,
         data: JSON.stringify({
-              "-Yahsndjekd": {
-        "firstName": "Christian",
-        "lastName": "Pastor",
-        "age": "32",
-        "userName":"ProgressivePastor",
+              "-kl290and8j": {
+        "firstName": "Cream",
+        "lastName": "Phantom",
+        "age": "53",
+        "userName":"GlideinaGhost",
         "posts": {
-            "-kekemdnfng":{
+            "-Q12ndk8udn":{
             "id":1,
-            "time":"2:32",
-            "post":"Life Changes",
-            "likes":"7",
-            "dislikes":"10"
+            "time":"2:42pm",
+            "post":"Ghost in the wind",
+            "likes":"771",
+            "dislikes":"150"
         },
-        "-kelrnamsju":{
+        "-M3hdjJkson":{
             "id":2,
-            "time":"2:42",
-            "post":"Ball of Fire",
-            "likes":"50",
-            "dislikes":"2"
+            "time":"2:53pm",
+            "post":"Crazy Ride gotta run",
+            "likes":"850",
+            "dislikes":"45"
         },
         
-        "-nkwiqouyts":{
+        "-Vag3h4kedH":{
             "id":3,
-            "time":"4:30",
-            "post":"A look inside",
-            "likes":"30",
+            "time":"5:30pm",
+            "post":"Stars in the ceiling",
+            "likes":"888",
             "dislikes":"5"
         }}
     },
@@ -165,7 +165,20 @@ $pbutton.click(function () {
     })
 })
 
-//delete data aka delete post 
+//delete data aka delete post
+$deletebtn.click(function () {
+    $.ajax({
+        type: "DELETE",
+        url: `${fireBaseUrl}-7dhek2nd9k${jsonEXT}`,
+        success: (data) => {
+            console.log("Deleted Successfully" + data)
+        },
+        error: (error) => {
+            console.log(error)
+        }
+        
+    })
+})
 
 //patch data edit button 
 
