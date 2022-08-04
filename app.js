@@ -3,6 +3,7 @@ const $pbutton = $('#pbtn');
 const $deletebtn = $('#deletebtn');
 const $editbtn = $('#editbtn');
 const $gtbtn = $('#gtbtn');
+const $signinbtn = $('#signinbtn');
 
 let fireBaseUrl = "https://twitterclone-af72e-default-rtdb.firebaseio.com/";
 let jsonEXT = ".json";
@@ -103,11 +104,66 @@ let jsonEXT = ".json";
 //     })
 // })();
 
+//login functionality
+$signinbtn.click(function () {
+    let currentUser = $('#username').val()
+    $.ajax({
+        type: "GET",
+        url: `${fireBaseUrl}${currentUser}${jsonEXT}`,
 
+        success: function (data) {
+            if (data === null) {
+                alert("User not reconigzed")
+            } else {
+                console.log("User exists")
+            }
+        },
+        error: function (error) {
+            console.log(error)
+        }
+    })
+})
      
 
 
 //post data aka create new post 
+$pbutton.click(function () {
+    $.ajax({
+        type: "POST",
+        url: `${fireBaseUrl}${jsonEXT}`,
+        data: JSON.stringify({
+              "-Yahsndjekd": {
+        "firstName": "Christian",
+        "lastName": "Pastor",
+        "age": "32",
+        "userName":"ProgressivePastor",
+        "posts": {
+            "-kekemdnfng":{
+            "id":1,
+            "time":"2:32",
+            "post":"Life Changes",
+            "likes":"7",
+            "dislikes":"10"
+        },
+        "-kelrnamsju":{
+            "id":2,
+            "time":"2:42",
+            "post":"Ball of Fire",
+            "likes":"50",
+            "dislikes":"2"
+        },
+        
+        "-nkwiqouyts":{
+            "id":3,
+            "time":"4:30",
+            "post":"A look inside",
+            "likes":"30",
+            "dislikes":"5"
+        }}
+    },
+        })
+    })
+})
 
 //delete data aka delete post 
 
