@@ -62,48 +62,7 @@ let jsonEXT = ".json";
     })
 }());
 
-
-//get data IFFY
-// (function(){
-//     $.ajax({
-//         type: "GET",
-//         url: `${fireBaseUrl}${jsonEXT}`,
-//         success: function (data) {
-//             let userInfo = { ...data }
-//             for (const userName in userInfo) {
-//                 if (Object.hasOwnProperty.call(userInfo, userName)) {
-//                     const userNameKey = userInfo[userName];
-
-//                     let userInfo2 = { ...data }
-//                     for (const id in userInfo2) {
-//                         if (Object.hasOwnPropery.call(userInfo2, id)) {
-//                             const feed = userInfo2[id].posts;
-
-//                             for (const post in feed) {
-//                                 if (Object.hasOwnProperty.call(feed, post)) {
-//                                     const postinfo = feed[post];
-
-//                                     let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
-//                                         "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
-//                                         "</p>" + "<p>" + postinfo.post + "</p>" +
-//                                         "<p>" + postinfo.time + "</p>" + "</div>";
-//                                     $('#userAppend').append(userGroup2);
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-            
-
-            
-//         },
-//         error: function(error){
-//             console.log(error)
-//         }
-//     })
-// })();
-
+                                    
 //login functionality
 $signinbtn.click(function () {
     let currentUser = $('#username').val()
