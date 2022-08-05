@@ -3,7 +3,9 @@ const $pbutton = $('#pbtn');
 const $deletebtn = $('#deletebtn');
 const $editbtn = $('#editbtn');
 const $gtbtn = $('#gtbtn');
-const $loginBtn= $('#loginBtn');
+const $loginBtn = $('#loginBtn');
+const $signinBtn = $('#signinBtn');
+const $createActBtn = $('#createActBtn');
 
 let fireBaseUrl = "https://twitterclone-af72e-default-rtdb.firebaseio.com/";
 let jsonEXT = ".json";
@@ -25,7 +27,7 @@ let jsonEXT = ".json";
                     console.log(userNameKey.firstName)
                     let userGroup = "<div>" + "<p>" + userNameKey.firstName +
                         " " + userNameKey.lastName + "</p>" + "</div>"
-                    $('#userAppend').append(userGroup)
+                    //$('#userAppend').append(userGroup)
                     let userNameKey1 = { ...data }
                     let userInfo2 = { ...data }
                     for (const id in userInfo2) {
@@ -41,11 +43,23 @@ let jsonEXT = ".json";
                                     console.log(postinfo.time, "This is the time");
                                     console.log(postinfo.post, "This is your post title")
                             
-                                    let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
+                                    
+                                    let currentUser = sessionStorage.getItem('user')
+                                    if (userInfo[userName].userName == currentUser) {
+                                        let userGroup3 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
+                                        "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
+                                        "</p>" + "<p>" + postinfo.post + "</p>" +
+                                            "<p>" + postinfo.time + "</p>" + "<button>" + "Edit" + "</button>" + "<button>" + "Delete" + "</button>" + "</div>"
+                                        $('#userAppend').append(userGroup3)
+                                        
+                                    } else {
+                                        let userGroup2 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
                                         "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
                                         "</p>" + "<p>" + postinfo.post + "</p>" +
                                         "<p>" + postinfo.time + "</p>" + "</div>"
                                     $('#userAppend').append(userGroup2)
+                                        
+                                    }
                                
                                 }
                             }
@@ -166,12 +180,72 @@ $editbtn.click(function () {
         type: "PATCH",
         url: `https://twitterclone-af72e-default-rtdb.firebaseio.com/-7dhek2nd9k/posts/-10dkfn4n5t/post${ jsonEXT }`,
         data: JSON.stringify({
-            post:"Testing To See If This Works"
+            post:"Hard Work Pays off"
         }),
         success: (data) => {
             console.log(data)
          },
         error: (error) => {
+            console.log(error)
+        }
+    })
+})
+
+//sign up 
+$createActBtn.click(function () {
+    
+    //console.log(currentUser);
+    $.ajax({
+        type: "GET",
+        url: `${fireBaseUrl}${jsonEXT}`,
+
+        success: function (data) {
+            let currentUser = $('#loginInput').val()
+            let userKnown = false;
+            let userInfo = { ...data }
+            for (const userName in userInfo) {
+                if (userInfo[userName].userName == currentUser) {
+                    alert("This user already exist");
+                     userKnown = true;
+                    break;
+                        }
+            }
+
+            if (userKnown === false) {
+ $.ajax({
+        type:"POST",
+        url:`${fireBaseUrl}${jsonEXT}`,
+        data: JSON.stringify({
+           firstName:$('#firstName').val(), 
+           lastName:$('#lastName').val() ,
+            age: $('#age').val(),
+            userName:$('#userName').val(),
+            
+            posts: {
+                
+            
+            },
+
+           
+        }),
+        success: function(data){
+            console.log(data)
+        },
+        error: function(error){
+            console.log(error)
+        }
+    })
+
+                // sessionStorage.setItem('user', currentUser)
+                   
+                //     window.location = "///Users/dj/Documents/TrendyX/feedsec.html"
+
+
+                
+            }
+            
+        },
+        error: function (error) {
             console.log(error)
         }
     })
