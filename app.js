@@ -6,6 +6,9 @@ const $gtbtn = $('#gtbtn');
 const $loginBtn = $('#loginBtn');
 const $signinBtn = $('#signinBtn');
 const $createActBtn = $('#createActBtn');
+const $editbtn2 = $('#editbtn2');
+const $deletebtn2 = $('#deletebtn2');
+
 
 let fireBaseUrl = "https://twitterclone-af72e-default-rtdb.firebaseio.com/";
 let jsonEXT = ".json";
@@ -49,7 +52,7 @@ let jsonEXT = ".json";
                                         let userGroup3 = "<div class = 'text-box' style= 'border: 1px solid black; margin-top: 5 px'>" +
                                         "<p>" + userNameKey.firstName + " " + userNameKey.lastName +
                                         "</p>" + "<p>" + postinfo.post + "</p>" +
-                                            "<p>" + postinfo.time + "</p>" + "<button>" + "Edit" + "</button>" + "<button>" + "Delete" + "</button>" + "</div>"
+                                            "<p>" + postinfo.time + "</p>" + "<button id = 'editbtn2'>" + "Edit" + "</button>" + "<button id = 'deletebtn2'>" + "Delete" + "</button>" + "</div>"
                                         $('#userAppend').append(userGroup3)
                                         
                                     } else {
@@ -179,6 +182,22 @@ $editbtn.click(function () {
     $.ajax({
         type: "PATCH",
         url: `https://twitterclone-af72e-default-rtdb.firebaseio.com/-7dhek2nd9k/posts/-10dkfn4n5t/post${ jsonEXT }`,
+        data: JSON.stringify({
+            post:"Hard Work Pays off"
+        }),
+        success: (data) => {
+            console.log(data)
+         },
+        error: (error) => {
+            console.log(error)
+        }
+    })
+})
+//edit post based on user
+$editbtn2.click(function () {
+    $.ajax({
+        type: "PATCH",
+        url: `https://twitterclone-af72e-default-rtdb.firebaseio.com/-Yjeo102839/posts/-kekemdnfng/post${ jsonEXT }`,
         data: JSON.stringify({
             post:"Hard Work Pays off"
         }),
