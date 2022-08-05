@@ -238,17 +238,22 @@ $createActBtn.click(function () {
            firstName:$('#firstName').val(), 
            lastName:$('#lastName').val() ,
             age: $('#age').val(),
-            userName:$('#userName').val(),
+            userName: $('#userName').val(),
+            
+           
             
             posts: {
                 
             
             },
+             
 
            
         }),
         success: function(data){
             console.log(data)
+            alert('thank you for siging up Trendy x  ')
+            window.location = "///Users/dj/Documents/TrendyX/index.html"
         },
         error: function(error){
             console.log(error)

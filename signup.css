@@ -11,6 +11,13 @@ h1{
         line-height: 155px;
         text-align: center;
 }
+/* a {
+    color:;
+    text-decoration: none;
+    background-color: transparent;
+    
+} */
+
 
 @media(min-width:40rem){
     h1{
